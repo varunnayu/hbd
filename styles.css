@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap');
+/* General Styles */
+body {
+    font-family: "Sofadi One", system-ui;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.hero-section {
+    background-image: url('8792873.png'); /* URL to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+
+.hero-img {
+    width: 70%;
+    border-radius: 0%;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #bba423;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #bba423;
+}
+
+.invitation-section {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.invitation-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-card h2 {
+    font-size: 28px;
+    color: #ff4081;
+}
+
+.invitation-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.rsvp-buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-accept {
+    background-color: #32cd32;
+    color: #fff;
+}
+
+.btn-decline {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Full-Screen Balloon Container */
+.balloon-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Balloons */
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #ff4081;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.balloon::after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    background-color: #ff4081;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes balloon-float {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-150vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.balloon.animate {
+    animation: balloon-float 5s ease-in-out forwards;
+}
+
+
+/* Extra Small Screens (Up to 480px) */
+@media (max-width: 480px) {
+
+    .hero-img {
+        width: 60%;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .invitation-card h2 {
+        font-size: 20px;
+    }
+
+    .invitation-card p {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .close {
+        font-size: 18px;
+    }
+
+    .balloon {
+        width: 35px;
+        height: 55px;
+    }
+}

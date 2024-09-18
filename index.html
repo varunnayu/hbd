@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Emma's Birthday Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="baby2.png" alt="Cute Baby Picture" class="hero-img">
+            <div class="hero-text">
+                <h1>Welcome to Kruthi Gouda's 1st Birthday Celebration!</h1>
+                <p>Join us for a day full of fun, laughter, and love as we celebrate this special milestone!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Invitation Section -->
+    <section class="invitation-section">
+        <div class="invitation-card">
+            <h2>You're Invited!</h2>
+            <p>Emma's 1st Birthday Party</p>
+            <p><strong>Date:</strong> September 28, 2024</p>
+            <p><strong>Time:</strong> 2:00 PM</p>
+            <p><strong>Location:</strong> 123 Celebration Avenue, Party Town</p>
+            
+            <div class="rsvp-buttons">
+                <button class="btn-accept">Accept</button>
+                <button class="btn-decline">Decline</button>
+            </div>
+
+            <p class="footer-text">We can't wait to celebrate with you! 💖</p>
+        </div>
+    </section>
+
+    <!-- Accept Pop-up Modal -->
+    <div id="acceptModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAccept">&times;</span>
+            <h2>Yay! You're coming!</h2>
+        </div>
+    </div>
+
+    <!-- Decline Pop-up Modal -->
+    <div id="declineModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDecline">&times;</span>
+            <p> We will miss you! 😔</p>
+        </div>
+    </div>
+
+    <!-- Full Screen Balloon Container -->
+    <div class="balloon-container" id="balloon-container"></div>
+
+    <!-- Audio Element -->
+    <audio id="celebration-music" src="01 - Jeene Laga Hoon - DownloadMing.SE.mp3" preload="auto"></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
